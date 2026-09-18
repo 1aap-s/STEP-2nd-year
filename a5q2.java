@@ -1,5 +1,4 @@
 class AccessChecker {
-
     public static String classifyAccess(
             String fieldModifier,
             String accessorContext) {
