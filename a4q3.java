@@ -3,7 +3,7 @@ class Canteen {
     private String canteenName;
     private int trustScore;
 
-    // Main constructor
+    
     public Canteen(String canteenCode, String canteenName, int trustScore) {
         this.canteenCode = canteenCode;
         this.canteenName = canteenName;
@@ -17,15 +17,15 @@ class Canteen {
 
     public int compareTo(Canteen other) {
 
-        // 1. Higher trust score first
+        
         if (this.trustScore != other.trustScore) {
-            return other.trustScore - this.trustScore;
+            return other.trustScore - this.trustScore;// 1. Higher trust score first
         }
 
-        // 2. Code as tie-breaker
+        
         String thisCode = this.canteenCode
                 .replaceAll("\\s+", "")
-                .toLowerCase();
+                .toLowerCase();// 2. Code as tie-breaker
 
         String otherCode = other.canteenCode
                 .replaceAll("\\s+", "")
